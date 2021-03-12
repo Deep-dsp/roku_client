@@ -1,29 +1,6 @@
 <section class="music-section">
     <p class="main-title">Music Goes Here! {{ musicMessage }}</p>
-    {{!-- <moviethumb v-for="item in allMovies" :movie="item" :key="item.movies_id"></moviethumb> --}}
-    <musicthumb v-for="item in allMusic" :music="item" :key="item.id"></musicthumb>
+    <div class="music-container">
+        <musicthumb v-for="item in allMusic" :music="item" :key="item.id"></musicthumb>
+    </div>
 </section>
-
-{{!-- <div class="audio-detail">
-                <p>song name</p>
-                <p>singer name</p>
-        </div>
-        <div class="audio-detail">
-                <p>song name</p>
-                <p>singer name</p>
-        </div>
-        <div class="player">
-            <audio controls>
-                <source src="/music/a.mp3" type="audio/mp3">
-            </audio>
-        </div> --}}
-
-        {{!-- <div class="music-container">
-            <div class="first-box">
-                <div class="music-thumb"></div>
-                <div class="music-detail">
-                    <p>song name</p>
-                    <p>singer name</p>
-                </div>
-            </div>
-        </div> --}}

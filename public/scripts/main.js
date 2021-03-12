@@ -11,7 +11,9 @@ import TheMusicThumb from './components/TheMusicThumbnailComp.js';
               allMovies: [],
               allMusic: [],
               musicpdb: {},
-              show_bio_data: false
+              show_bio_data: false,
+              show_default_data: true,
+              hide_first_data: false
           },
           created: function(){
               console.log("inside Vue Js");
@@ -37,6 +39,8 @@ import TheMusicThumb from './components/TheMusicThumbnailComp.js';
                 this.show_bio_data = true;
                 // music data
                 this.musicpdb = item;
+                this.show_default_data = false;
+                this.hide_first_data = true;
                 // console.log(this.musicpdb);
             }
           },

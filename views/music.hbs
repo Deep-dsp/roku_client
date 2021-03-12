@@ -5,13 +5,23 @@
     </div>
 </section>
 <section class="audio-section">
-    <div class="audio-bar" :class="{'show-data' : show_bio_data}">
+    <div class="audio-bar" :class="{'show-data' : show_bio_data}" v-show="hide_first_data">
         <div class="song-detail">
             <img :src="'/images/music/' + musicpdb.thumbnail">
             {{!-- <p class="song-bar-name">{{musicpdb.song_name}}</p> --}}
         </div>
         <div class="audio">
             <audio :src="'/music/' + musicpdb.song_format" controls></audio>
+        </div>
+    </div>
+    {{!-- Shows data on audio bar when page reload first time --}}
+    <div class="audio-bar" v-show="show_default_data">
+        <div class="song-detail">
+            <img src="/images/music/blue.png">
+            {{!-- <p class="song-bar-name">{{musicpdb.song_name}}</p> --}}
+        </div>
+        <div class="audio">
+            <audio src="/music/blue.mp3" controls></audio>
         </div>
     </div>
 </section>

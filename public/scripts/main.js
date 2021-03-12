@@ -9,7 +9,9 @@ import TheMusicThumb from './components/TheMusicThumbnailComp.js';
       const vm = new Vue({
           data:{
               allMovies: [],
-              allMusic: []
+              allMusic: [],
+              musicpdb: {},
+              show_bio_data: false
           },
           created: function(){
               console.log("inside Vue Js");
@@ -29,8 +31,13 @@ import TheMusicThumb from './components/TheMusicThumbnailComp.js';
           },
 
           methods:{
+            //   music
             imageSelected(item){
                 console.log("Thumbnail /image Selected:", item.song_name);
+                this.show_bio_data = true;
+                // music data
+                this.musicpdb = item;
+                // console.log(this.musicpdb);
             }
           },
 

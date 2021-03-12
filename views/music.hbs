@@ -5,15 +5,13 @@
     </div>
 </section>
 <section class="audio-section">
-    <div class="audio-bar">
+    <div class="audio-bar" :class="{'show-data' : show_bio_data}">
         <div class="song-detail">
-            <img src="/images/music/blue.png">
-            <p class="song-bar-name">song-name</p>
+            <img :src="'/images/music/' + musicpdb.thumbnail">
+            {{!-- <p class="song-bar-name">{{musicpdb.song_name}}</p> --}}
         </div>
         <div class="audio">
-            <audio controls>
-                <source src="/music/blue.mp3">
-            </audio>
+            <audio :src="'/music/' + musicpdb.song_format" controls></audio>
         </div>
     </div>
 </section>

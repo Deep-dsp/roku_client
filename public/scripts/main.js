@@ -29,8 +29,8 @@ import TheMusicThumb from './components/TheMusicThumbnailComp.js';
           },
 
           methods:{
-            imageSelected(music){
-                console.log("Thumbnail Selected:", music.song_name);
+            imageSelected(item){
+                console.log("Thumbnail /image Selected:", item.song_name);
             }
           },
 

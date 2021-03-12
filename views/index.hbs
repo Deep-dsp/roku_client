@@ -1,0 +1,9 @@
+<section class="hero-image">
+    {{!-- render the dynamic data here --}}
+    <h4>{{ message }}</h4>
+
+    {{!-- render thumbnail --}}
+    <moviethumb v-for="item in allMovies" :movie="item" :key="item.movies_id"></moviethumb>
+    <h5>Music Thumb</h5>
+    <musicthumb v-for="item in allMusic" :music="item" :key="item.id"></musicthumb>
+</section>

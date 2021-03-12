@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Roku Streaming Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main id="app">
+        <header>
+            <div class="main-header">
+                <nav>
+                    <div class="nav-wrapper">
+                        <div class="container">
+                            <a href="#" class="brand-logo">ROKU</a>
+                            {{!-- How to add "active class according to routes dynamic" --}}
+                            <ul class="hide-on-med-and-down right">
+                                <li><a href="/">Movies</a></li>
+                                <li><a href="/shows">TV Shows</a></li>
+                                <li><a href="/music">Music</a></li>
+                                <li><a href="#"><i class="material-icons">search</i></a></li>
+                                <li><a href="#" class="dropdown-trigger" data-target="user-profile"><i class="material-icons">account_circle</i></a></li>
+                            </ul>
+                            <a href="#" class="sidenav-trigger right" data-target="side_nav"><i class="material-icons">menu</i></a>
+                        </div>
+                    </div>
+                </nav>
+                <ul class="sidenav" id="side_nav">
+                    <a href="#" class="sidenav-close right"><i class="material-icons">close</i></a>
+                    <li class="active-nav"><a href="#">Movies</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">Music</a></li>
+                    <input id="search" type="search" required>
+                    <label for="search"><i class="material-icons">search</i></label>
+                    <li><a href="#" class="dropdown-trigger" data-target="user-profile"><i class="material-icons">account_circle</i>Account</a></li>
+                </ul>
+
+                <ul class="dropdown-content" id="user-profile">
+                    <a href="#" class="sidenav-close right"><i class="material-icons">close</i></a>
+                    <li><a href="#">parents</a></li>
+                    <li><a href="#">Kids</a></li>
+                </ul>
+        </header>
+        <h5>Welcome --User name--</h5>
+        {{!-- This is where handlers inject templates --}}
+        {{{ body }}}
+
+        {{!-- Popup Box --}}
+
+    {{!-- <section class="pop-box">
+        <div class="close-button">
+            <p>&#10008;</p>
+        </div>
+        <div class="screen">
+            display
+        </div>
+        <div class="details">
+            <div class="title">
+                <div class="line"></div>
+                <div class="name">movie</div>
+            </div>
+            <div class="about">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque magni ullam sed laboriosam 
+                    consequatur enim nobis unde id totam impedit.
+                </p>
+                <p>Time:</p>
+                <p>Movie Rate:</p>
+            </div>
+        </div>
+    </section>    --}}
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer type="module" src="scripts/main.js"></script>
+</body>
+</html>

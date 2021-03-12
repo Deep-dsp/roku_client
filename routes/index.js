@@ -20,7 +20,7 @@ router.get('/', (req,res)=>{
 // Music
 router.get('/music', (req,res)=>{
     // res.send("hit the main route");
-    res.render('music', { musicMessage: "Nighty Nights -> Rock"})
+    res.render('music', { musicMessage: "Enjoy Country Music-night!"})
 })
 
 //shows

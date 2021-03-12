@@ -1,6 +1,19 @@
 <section class="music-section">
-    <p class="main-title">Music Goes Here! {{ musicMessage }}</p>
+    <p class="main-title">{{ musicMessage }}</p>
     <div class="music-container">
-        <musicthumb v-for="item in allMusic" :music="item" :key="item.id"></musicthumb>
+        <musicthumb @showmydata="imageSelected" v-for="item in allMusic" :music="item" :key="item.id"></musicthumb>
+    </div>
+</section>
+<section class="audio-section">
+    <div class="audio-bar">
+        <div class="song-detail">
+            <img src="/images/music/blue.png">
+            <p class="song-bar-name">song-name</p>
+        </div>
+        <div class="audio">
+            <audio controls>
+                <source src="/music/blue.mp3">
+            </audio>
+        </div>
     </div>
 </section>

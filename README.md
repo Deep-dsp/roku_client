@@ -13,7 +13,6 @@ This is front-end side of video streaming app where data has been fetched from d
 You need these to run the program:
 
 * NPM
-* socket.io()
 * express
 * mySql
 * hbs - js Handlebars

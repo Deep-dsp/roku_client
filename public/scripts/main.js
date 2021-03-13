@@ -1,5 +1,6 @@
 
 import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js';
+import './components/audioWebAccessibility.js';
 import TheMovieThumb from './components/TheMovieThumbnailComp.js';
 import TheMusicThumb from './components/TheMusicThumbnailComp.js';
 // import './components/loginPanelAnim.js';

@@ -15,7 +15,7 @@ export default{
 
     methods:{
         thumbSelected(){
-            console.log(`Thumbnail image for "${this.music.song_name}" song selected from component`)
+            console.log(`Thumbnail image for "${this.music.song_name}" song selected from component`);
             this.$emit("showmydata", this.music);
         }
     }

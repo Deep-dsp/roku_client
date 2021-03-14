@@ -8,7 +8,7 @@
 <section class="movie-section">
     <p class="main-title">Make Your Movie night ROCK-BUSTER!!</p>
     <div class="movie-container">
-        <moviethumb v-for="item in allMovies" :movie="item" :key="item.movie_id"></moviethumb>
+        <moviethumb @showmydata="movieImageSelected" v-for="item in allMovies" :movie="item" :key="item.movie_id"></moviethumb>
     </div>
 </section>
 

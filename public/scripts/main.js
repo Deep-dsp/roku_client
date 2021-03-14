@@ -10,6 +10,7 @@ import TheMusicThumb from './components/TheMusicThumbnailComp.js';
           data:{
               allMovies: [],
               allMusic: [],
+              moviesdb:{},
               musicpdb: {},
               show_bio_data: false,
               show_default_data: true,
@@ -42,6 +43,12 @@ import TheMusicThumb from './components/TheMusicThumbnailComp.js';
                 this.show_default_data = false;
                 this.hide_first_data = true;
                 // console.log(this.musicpdb);
+            },
+
+            movieImageSelected(item){
+                console.log("Thumbnail movie image Selected:", item.movie_title);
+                // this.show_bio_data = true;
+                this.moviesdb = item;
             }
           },
 

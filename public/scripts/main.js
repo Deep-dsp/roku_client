@@ -4,7 +4,6 @@ import './components/audioWebAccessibility.js';
 import TheMovieThumb from './components/TheMovieThumbnailComp.js';
 import TheMusicThumb from './components/TheMusicThumbnailComp.js';
 // import './components/loginPanelAnim.js';
-// import './components/popclose.js';
 
   (()=>{
       const vm = new Vue({

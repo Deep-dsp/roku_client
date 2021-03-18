@@ -14,8 +14,9 @@ export default{
 
     methods:{
         movieThumbSelected(){
+            // document.querySelector('.pop-box').classList.add('pop-close');
             console.log(`thumbnail: "${this.movie.movie_title}" movie selected from component`);
-            this.$emit("showmydata",this.movie);
+            this.$emit("showmoviedata",this.movie);
         }
     }
 }

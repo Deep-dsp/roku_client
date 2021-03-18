@@ -8,35 +8,16 @@
 <section class="movie-section">
     <p class="main-title">Make Your Movie night ROCK-BUSTER!!</p>
     <div class="movie-container">
-        <moviethumb @showmydata="movieImageSelected" v-for="item in allMovies" :movie="item" :key="item.movie_id"></moviethumb>
+        <moviethumb @showmoviedata="movieImageSelected" v-for="item in allMovies" :movie="item" :key="item.movie_id"></moviethumb>
     </div>
 </section>
 
 {{!-- POP-UP BOX --}}
-<section class="pop-box">
+<section class="pop-box" v-if="show_movie_data">
     <div class="close-button">
-            <span>&#10008;</span>
+            <span @click="closePopup">&#10008;</span>
     </div>
-    <div class="screen-box">
-        
-        <div class="screen">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/fB_8VCwXydM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="details">
-            <div class="title">
-                    <h5>Movie Name</h5>
-                    <p>
-                        <sub>release date</sub><br>
-                        <sub>Duration</sub>
-                    </p>    
-            </div>
-            <div class="about">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque magni ullam sed laboriosam 
-                    consequatur enim nobis unde id totam impedit.
-                </p>
-                <p>Time:</p>
-                <p>Movie Rate:</p>
-            </div>
-        </div>
+    <div>
+        <popupmovie :trailer="moviesdb.movie_trailer" :title="moviesdb.movie_title" :date="moviesdb.movie_year" :runtime="moviesdb.movie_runtime" :about="moviesdb.movie_storyline" :rate="moviesdb.imdb_rate" :key="movie_id"></popupmovie>
     </div>
 </section>   

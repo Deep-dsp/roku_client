@@ -25,6 +25,7 @@
         width: 80%;
         display: flex;
         justify-content: space-evenly;
+        
         .song-box{
 
             img{
@@ -100,5 +101,35 @@
                 width: 100%;
             }
         }
-    }    
+    }   
+    
+    .audio-component-bar{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        
+        .song-detail{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 60px;
+                height: auto;
+            }
+
+            .song-bar-name{
+                font-family: Arial, Helvetica, sans-serif;
+                color: #fff;
+                padding:0 5px;
+            }
+        }
+
+        .audio{
+            flex:1;
+            audio{
+                width: 100%;
+            }
+        }
+    }
 }

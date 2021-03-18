@@ -5,31 +5,17 @@
     </div>
 </section>
 <section class="audio-section">
-    <div class="audio-bar" :class="{'show-data' : show_bio_data }" v-show="hide_first_data">
-        <div class="song-detail">
-            <img :src="'/images/music/' + musicpdb.thumbnail">
-        </div>
-        <div class="audio">
-            <audio :src="'/music/' + musicpdb.song_format" controls></audio>
-        </div>
+    <div :class="{'show-data' : show_bio_data }" v-show="hide_first_data">
+        <clickmusic :format="musicpdb.song_format" :name="musicpdb.song_name" :musicbar="musicpdb.thumbnail" :key="id"></clickmusic>
     </div>
 
-    {{!-- Shows data on audio bar when page reload first time --}}
     <div class="audio-bar" v-show="show_default_data">
         <div class="song-detail">
             <img src="/images/music/blue.png">
-            {{!-- <p class="song-bar-name">{{musicpdb.song_name}}</p> --}}
+            <p class="song-bar-name">Blue Christmas</p>
         </div>
         <div class="audio">
             <audio class='stopVideo' src="/music/blue.mp3" controls></audio>
-
-            {{!-- audio accessibility --}}
-            {{!-- <div class="div-controls">
-                <img src="/images/play.svg" data-button="0"  alt="play">
-                <img src="/images/pause.svg"  data-button="1" alt="pause">
-                <img src="/images/stop.svg" data-button="2" alt="stop">
-                <img src="/images/rewind.svg" data-button="3" alt="rewind">
-            </div> --}}
         </div>
     </div>
 </section>

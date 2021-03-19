@@ -37,49 +37,25 @@
                 </nav>
                 <ul class="sidenav" id="side_nav">
                     <a href="#" class="sidenav-close right"><i class="material-icons">close</i></a>
-                    <li class="active-nav"><a href="#">Movies</a></li>
-                    <li><a href="#">TV Shows</a></li>
-                    <li><a href="#">Music</a></li>
+                    <li><a href="/">Movies</a></li>
+                    <li><a href="/shows">TV Shows</a></li>
+                    <li><a href="/music">Music</a></li>
                     <input id="search" type="search" required>
                     <label for="search"><i class="material-icons">search</i></label>
-                    <li><a href="#" class="dropdown-trigger" data-target="user-profile"><i class="material-icons">account_circle</i>Account</a></li>
+                    <li><a class="dropdown-trigger btn" href="#" data-target="user-profile"><i class="material-icons">account_circle</i>Account</a></li>
                 </ul>
 
-                <ul class="dropdown-content" id="user-profile">
+                <ul id="user-profile" class="dropdown-content">
                     <a href="#" class="sidenav-close right"><i class="material-icons">close</i></a>
                     <li><a href="#">parents</a></li>
                     <li><a href="#">Kids</a></li>
                 </ul>
         </header>
-        <h5>Welcome --User name--</h5>
+        <h5 class="welcome-user">Welcome --User name--</h5>
         {{!-- This is where handlers inject templates --}}
         {{{ body }}}
 
-        {{!-- Popup Box --}}
-
-    {{!-- <section class="pop-box">
-        <div class="close-button">
-            <p>&#10008;</p>
-        </div>
-        <div class="screen">
-            display
-        </div>
-        <div class="details">
-            <div class="title">
-                <div class="line"></div>
-                <div class="name">movie</div>
-            </div>
-            <div class="about">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque magni ullam sed laboriosam 
-                    consequatur enim nobis unde id totam impedit.
-                </p>
-                <p>Time:</p>
-                <p>Movie Rate:</p>
-            </div>
-        </div>
-    </section>    --}}
     </main>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer type="module" src="/scripts/main.js"></script>
 </body>

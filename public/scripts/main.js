@@ -1,13 +1,13 @@
 
 import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js';
 import './components/audioWebAccessibility.js';
+// import './components/loginPanelAnim.js';
 import TheMovieThumb from './components/TheMovieThumbnailComp.js';
 import TheShowThumb from './components/TheShowThumbnailComp.js';
 import TheMusicThumb from './components/TheMusicThumbnailComp.js';
 import onclickmusic from './components/onClickMusic.js';
 import ThePopMovieData from './components/popMovieData.js';
 import ThePopShowData from './components/ThePopShowData.js';
-// import './components/loginPanelAnim.js';
 
   (()=>{
       const vm = new Vue({

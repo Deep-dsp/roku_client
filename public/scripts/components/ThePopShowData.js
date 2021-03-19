@@ -1,5 +1,5 @@
 export default{
-    name: "ThePopMovie",
+    name: "popupshow",
     props: ['trailer', 'title', 'date', 'runtime', 'about', 'rate'],
     template:`
     <div class="screen-box">

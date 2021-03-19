@@ -1,1 +1,16 @@
-<p>Music Goes Here! {{ showMessage }}</p>
+<section class="movie-section">
+    <p class="main-title">{{showMessage}}</p>
+    <div class="movie-container">
+        <showthumb @showshowdata="showImageSelected" v-for="item in allShows" :show="item" :key="item.shows_id"></showthumb>
+    </div>
+</section>
+
+{{!-- POP-UP BOX --}}
+<section class="pop-box" v-if="show_movie_data">
+    <div class="close-button">
+            <span @click="closePopup">&#10008;</span>
+    </div>
+    <div>
+        <popupmovie :trailer="showsdb.show_trailer" :title="showsdb.show_title" :date="showsdb.show_year" :runtime="showsdb.show_runtime" :about="showsdb.show_storyline" :rate="showsdb.imdb_rate" :key="shows_id"></popupmovie>
+    </div>
+</section> 

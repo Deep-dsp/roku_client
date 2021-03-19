@@ -26,7 +26,7 @@ router.get('/music', (req,res)=>{
 //shows
 router.get('/shows', (req,res)=>{
     // res.send("hit the main route");
-    res.render('shows', {showMessage: "Watch Your Favoroutie Television show"})
+    res.render('shows', {showMessage: "Watch Your Favoroutie show"})
 })
 
 //other routes

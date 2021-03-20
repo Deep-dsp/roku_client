@@ -141,3 +141,12 @@
         }
     }
 }
+
+@media only screen and (max-width:768px){
+    .audio-component-bar .song-detail p{
+        display: none;
+    }
+    .audio-component-bar audio{
+        padding-left: 10px;
+    }
+}

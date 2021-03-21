@@ -1,34 +1,103 @@
 /* Div Controls Styling */
 
-.div-controls
-{
+// .div-controls
+// {
+//   display: flex;
+//   justify-content: flex-start;
+
+//   max-width: 50%;
+//   margin: auto;
+// }
+
+// .div-controls img
+// {
+//   width: 3vh;
+//   height: auto;
+//   padding: 5px;
+//   margin-top: 15px;
+//   margin-right: 10px;
+// }
+
+// .div-controls img:hover
+// {
+//   cursor: pointer;
+//   background-color: #A9A9A9;
+//   border-radius: 50%;
+//   margin-right: 15px;
+//   margin-left: 3px;
+// }
+
+// .active
+// {
+//   background-color: #A9A9A9;
+//   border-radius: 50%;
+// }
+
+// MDN GUide
+
+@font-face {
+  font-family: 'HeydingsControlsRegular';
+  src: url('fonts/heydings_controls-webfont.eot');
+  src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/heydings_controls-webfont.woff') format('woff'),
+       url('fonts/heydings_controls-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.controls {
+  // visibility: hidden;
+  // opacity: 0.5;
+  width: 80%;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 25px;
+  left: 28%;
+  margin-left: -200px;
+  background-color: rgb(216, 216, 216);
+  box-shadow: 3px 3px 5px black;
+  transition: 1s all;
   display: flex;
-  justify-content: flex-start;
-
-  max-width: 50%;
-  margin: auto;
 }
 
-.div-controls img
-{
-  width: 3vh;
-  height: auto;
-  padding: 5px;
-  margin-top: 15px;
-  margin-right: 10px;
+.player:hover .controls, player:focus .controls {
+  opacity: 1;
 }
 
-.div-controls img:hover
-{
-  cursor: pointer;
-  background-color: #A9A9A9;
-  border-radius: 50%;
-  margin-right: 15px;
-  margin-left: 3px;
+button:before {
+  font-family: HeydingsControlsRegular;
+  font-size: 20px;
+  position: relative;
+  content: attr(data-icon);
+  color: #aaa;
+  text-shadow: 1px 1px 0px black;
 }
 
-.active
-{
-  background-color: #A9A9A9;
-  border-radius: 50%;
+// Timer CSS
+.timer {
+  line-height: 38px;
+  font-size: 10px;
+  font-family: monospace;
+  text-shadow: 1px 1px 0px black;
+  color: white;
+  flex: 5;
+  position: relative;
+}
+
+.timer div {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 38px;
+  z-index: 2;
+}
+
+.timer span {
+  position: absolute;
+  z-index: 3;
+  left: 19px;
 }

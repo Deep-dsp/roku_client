@@ -34,10 +34,19 @@ If you don't know what any of these are, start here: www.mozilla.com
 
 Clone this to the location of your choice, open in your favourite editor and hack away!
 
-## Author
+### Roku Roadmap
+[Roku Roadmap](https://docs.google.com/document/d/1siQ9UVwh2i0tY6jwJXsLE7Pt0eKPg2X5Npt0obwlOfU/edit?usp=sharing)
+
+### Dev notes
+[Roku devnotes](https://docs.google.com/document/d/1VyF4GH9AWdBZF2GIqOn66UEvz0jNv4z9Z67CwBEU5cQ/edit?usp=sharing)
+
+### Design Note
+[Roku design notes](https://docs.google.com/document/d/1aihQBQ7M5O5ThfTp0HXbxFJCe-oXqwqZ3-BhbaWiSCM/edit?usp=sharing)
+
+### Author
 * Deepkumar Patel(0953510)
 
-## References 
+### References 
 
 Icon from [www.semantic-ui.com](https://semantic-ui.com/)
 

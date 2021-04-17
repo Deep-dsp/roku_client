@@ -1,0 +1,23 @@
+{{!-- <section class="hero-image">
+
+    <h4>{{ message }}</h4>
+    <moviethumb v-for="item in allMovies" :movie="item" :key="item.movies_id"></moviethumb>
+</section> --}}
+
+{{!-- Movie Front-End Display --}}
+<section class="movie-section">
+    <p class="main-title">Make Your Movie night ROCK-BUSTER!!</p>
+    <div class="movie-container">
+        <moviethumb @showmoviedata="movieImageSelected" v-for="item in allMovies" :movie="item" :key="item.movie_id"></moviethumb>
+    </div>
+</section>
+
+{{!-- POP-UP BOX --}}
+<section class="pop-box" v-if="show_movie_data">
+    <div class="close-button">
+            <span @click="closePopup">&#10008;</span>
+    </div>
+    <div>
+        <popupmovie :trailer="moviesdb.movie_trailer" :title="moviesdb.movie_title" :date="moviesdb.movie_year" :runtime="moviesdb.movie_runtime" :about="moviesdb.movie_storyline" :rate="moviesdb.imdb_rate" :key="movie_id"></popupmovie>
+    </div>
+</section>   

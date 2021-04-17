@@ -1,0 +1,33 @@
+<section class="music-section">
+    <p class="main-title">{{ musicMessage }}</p>
+    <div class="music-container">
+        <musicthumb @showmydata="imageSelected"  v-for="item in allMusic" :music="item" :key="item.id"></musicthumb>
+    </div>
+</section>
+<section class="audio-section">
+    <div :class="{'show-data' : show_bio_data }" v-show="hide_first_data">
+        <clickmusic :format="musicpdb.song_format" :name="musicpdb.song_name" :musicbar="musicpdb.thumbnail" :key="id"></clickmusic>
+    </div>
+
+    <div class="audio-bar" v-show="show_default_data">
+        {{!-- <div class="song-detail">
+            <img src="/images/music/blue.png">
+            <p class="song-bar-name">Blue Christmas</p>
+        </div> --}}
+        <div class="audio">
+            <audio class='stopVideo' src="" controls></audio>
+
+            {{!-- Custome Audio Controls --}}
+            {{!-- <div class="controls">
+                <button class="play" data-icon="P" aria-label="play pause toggle"></button>
+                <button class="stop" data-icon="S" aria-label="stop"></button>
+                <div class="timer">
+                <div></div>
+                <span aria-label="timer">00:00</span>
+                </div>
+                <button class="rwd" data-icon="B" aria-label="rewind"></button>
+                <button class="fwd" data-icon="F" aria-label="fast forward"></button>
+            </div> --}}
+        </div>
+    </div>
+</section>
